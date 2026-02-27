@@ -1,0 +1,12 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./packages/core" },
+    { "path": "./packages/vanilla" },
+    { "path": "./packages/renderer-dot" },
+    { "path": "./packages/renderer-bottom-border" },
+    { "path": "./packages/react" },
+    { "path": "./packages/vue" },
+    { "path": "./packages/angular" }
+  ]
+}

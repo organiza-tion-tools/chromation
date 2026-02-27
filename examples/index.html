@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chroma-tion Vanilla Examples</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(145deg, #f5f7fa 0%, #e6eef7 100%);
+        color: #1d2630;
+      }
+
+      .page {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: 2rem;
+      }
+
+      p {
+        margin: 0 0 28px;
+        line-height: 1.5;
+      }
+
+      .card {
+        background: #ffffffd9;
+        border: 1px solid #d0d9e6;
+        border-radius: 14px;
+        padding: 20px;
+        box-shadow: 0 10px 24px rgba(20, 36, 58, 0.08);
+      }
+
+      .field {
+        display: grid;
+        gap: 8px;
+        margin-bottom: 18px;
+      }
+
+      .field:last-child {
+        margin-bottom: 0;
+      }
+
+      label {
+        font-size: 0.95rem;
+        font-weight: 600;
+      }
+
+      input[type="password"] {
+        width: min(100%, 420px);
+        font: inherit;
+        border: 1px solid #a8b7ca;
+        border-radius: 8px;
+        padding: 10px 12px;
+        outline: none;
+      }
+
+      input[type="password"]:focus {
+        border-color: #4f6d90;
+      }
+
+      .hint {
+        margin-top: 16px;
+        font-size: 0.9rem;
+        color: #44576f;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <h1>Chroma-tion: Vanilla Demo</h1>
+      <p>
+        The color is a deterministic visual fingerprint of the typed password. If the color unexpectedly changes,
+        user can detect a typo before submit.
+      </p>
+
+      <section class="card">
+        <div class="field">
+          <label for="password-dot">Dot renderer</label>
+          <input id="password-dot" type="password" autocomplete="current-password" />
+        </div>
+
+        <div class="field">
+          <label for="password-border">Bottom border renderer</label>
+          <input id="password-border" type="password" autocomplete="current-password" />
+        </div>
+
+        <p class="hint">
+          Open devtools and call <code>window.chromationControllers</code> to access attach/detach handles.
+        </p>
+      </section>
+    </main>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "@chroma-tion/core": "/packages/core/dist/index.js",
+          "@chroma-tion/vanilla": "/packages/vanilla/dist/index.js",
+          "@chroma-tion/renderer-dot": "/packages/renderer-dot/dist/index.js",
+          "@chroma-tion/renderer-bottom-border": "/packages/renderer-bottom-border/dist/index.js"
+        }
+      }
+    </script>
+    <script type="module" src="/examples/vanilla/main.js"></script>
+  </body>
+</html>

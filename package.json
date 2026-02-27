@@ -1,0 +1,17 @@
+{
+  "name": "chroma-tion-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.13.1",
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rm -rf packages/*/dist",
+    "typecheck": "tsc -b --pretty false",
+    "test": "pnpm run build && node --test tests/**/*.test.mjs",
+    "examples:build": "pnpm run build",
+    "examples:serve": "python3 -m http.server 4173"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
