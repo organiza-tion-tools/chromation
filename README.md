@@ -9,7 +9,7 @@ Monorepo with scoped packages `@chroma-tion/*`.
 - `@chroma-tion/renderer-dot`: dot indicator renderer
 - `@chroma-tion/renderer-bottom-border`: bottom border renderer
 - `@chroma-tion/react`: placeholder
-- `@chroma-tion/vue`: placeholder
+- `@chroma-tion/vue`: Vue 3 Composition API adapter
 - `@chroma-tion/angular`: placeholder
 
 ## Quick start (vanilla)
@@ -42,3 +42,4 @@ if (input instanceof HTMLInputElement) {
 1. Run `pnpm run examples:build`
 2. Run `pnpm run examples:serve`
 3. Open `http://localhost:4173/examples/index.html`
+4. Choose `Vanilla` or `Vue 3` demo page

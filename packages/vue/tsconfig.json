@@ -6,6 +6,7 @@
     "outDir": "dist"
   },
   "references": [
+    { "path": "../core" },
     { "path": "../vanilla" }
   ],
   "include": ["src/**/*"]

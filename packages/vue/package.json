@@ -17,6 +17,10 @@
     "build": "tsc -b"
   },
   "dependencies": {
+    "@chroma-tion/core": "workspace:*",
     "@chroma-tion/vanilla": "workspace:*"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
   }
 }

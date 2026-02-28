@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chroma-tion Vue Example</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(130deg, #f7fbff 0%, #e8f5ef 100%);
+        color: #1f2f2a;
+      }
+
+      .page {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      .card {
+        background: #ffffffdb;
+        border: 1px solid #c5ddd0;
+        border-radius: 14px;
+        padding: 20px;
+        box-shadow: 0 10px 24px rgba(25, 59, 44, 0.08);
+      }
+
+      .field {
+        display: grid;
+        gap: 8px;
+      }
+
+      input[type="password"] {
+        width: min(100%, 420px);
+        font: inherit;
+        border: 1px solid #8db8a1;
+        border-radius: 8px;
+        padding: 10px 12px;
+        outline: none;
+      }
+
+      .swatch {
+        width: 120px;
+        height: 36px;
+        border-radius: 8px;
+        border: 1px solid #b4c9bc;
+        transition: background-color 120ms linear;
+      }
+
+      .meta {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+        font-size: 0.88rem;
+      }
+
+      .back {
+        display: inline-block;
+        margin-bottom: 16px;
+        color: #2b6b52;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <a class="back" href="/examples/index.html">Back to examples</a>
+      <div id="app"></div>
+    </main>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "vue": "https://cdn.jsdelivr.net/npm/vue@3/dist/vue.esm-browser.js",
+          "@chroma-tion/core": "/packages/core/dist/index.js",
+          "@chroma-tion/vanilla": "/packages/vanilla/dist/index.js",
+          "@chroma-tion/vue": "/packages/vue/dist/index.js",
+          "@chroma-tion/renderer-dot": "/packages/renderer-dot/dist/index.js"
+        }
+      }
+    </script>
+    <script type="module" src="/examples/vue/main.js"></script>
+  </body>
+</html>

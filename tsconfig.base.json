@@ -1,5 +1,15 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@chroma-tion/core": ["packages/core/src/index.ts"],
+      "@chroma-tion/vanilla": ["packages/vanilla/src/index.ts"],
+      "@chroma-tion/renderer-dot": ["packages/renderer-dot/src/index.ts"],
+      "@chroma-tion/renderer-bottom-border": ["packages/renderer-bottom-border/src/index.ts"],
+      "@chroma-tion/react": ["packages/react/src/index.ts"],
+      "@chroma-tion/vue": ["packages/vue/src/index.ts"],
+      "@chroma-tion/angular": ["packages/angular/src/index.ts"]
+    },
     "target": "ES2020",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
